@@ -1,0 +1,70 @@
+body {
+    background: linear-gradient(to bottom, #000000, #f96c00);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+     align-items: center;
+    height:100vh ;
+  }
+  
+  .login-box {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 35px;
+    padding: 20px;
+    border-radius: 5px;
+    color: #fff;
+  }
+  
+  .form input[type="text"],
+  .form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  .form {
+    position: relative;
+    background: #00000082;
+    max-width: 360px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius:10px;
+  }
+
+  .form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(10deg, #ece5e5 1%, #f96c00 65%);
+    color: #000000;
+    cursor: pointer;
+  }
+  
+  .form button:hover {
+    background-color: #ff6f00;
+    letter-spacing: .2rem;
+    transform: scale(1.1);
+    transition: .1s ease-in-out;
+  }
+  
+  .message {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .message a {
+    color: #63c2de;
+    text-decoration: none;
+  }
+  
+  .message a:hover {
+    text-decoration: underline;
+  }
+  

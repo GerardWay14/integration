@@ -1,0 +1,117 @@
+body {
+    background: linear-gradient(160deg, #071014 0%, #cf5d05 100%);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+     align-items: center;
+    height:100vh ;
+  }
+
+.container {
+max-width: 600px;
+margin: 0 auto;
+padding: 20px;
+}
+
+h3 {
+color: #ffffff;
+font-size: 24px;
+margin-bottom: 10px;
+}
+
+h4 {
+color: #ffffff;
+font-size: 16px;
+margin-bottom: 20px;
+}
+
+p {
+    color: #ffffff;
+    font-size: 14px;
+    margin-bottom: 20px;
+    }
+
+form {
+margin-top: 25px;
+margin-bottom: 20px;
+position: relative;
+    background: #00000082;
+    width: 400px;
+    height: auto;
+    max-width: 500px;
+    padding: 45px;
+    text-align: left;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius:10px;
+}
+
+label {
+display: block;
+margin-bottom: 5px;
+color: #ffffff;
+font-size: 16px;
+font-weight: bold;
+}
+
+        input[type="date"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        input[type="submit"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            width: 50%;
+            cursor: pointer;
+            background: linear-gradient(160deg, #071014 0%, #ffffff 100%);
+        }
+
+        input[type="submit"]:hover {
+            background: linear-gradient(160deg, #071014 1%, #cf5d05 100%);
+            color: #ffffff;
+            letter-spacing: .2rem;
+            transform: scale(1.1);
+            transition: .1s ease-in-out;
+          }
+
+        
+
+        hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+        }
+
+        nav{
+            flex: 1;
+            text-align: center;
+        }
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            margin-right: 30px;
+            background: linear-gradient(195deg, #000000 10%, #7b2005 55%);
+            border-radius: 5px;
+            padding: 8px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 19px;
+        }
+
+        nav ul li a:hover {
+            color: #ffffff;
+            letter-spacing: .1rem;
+            transform: scale(1.1);
+            transition: .2s ease-in-out;
+            
+        }
