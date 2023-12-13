@@ -17,6 +17,39 @@ if (!isset($_SESSION['user'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="intro2.css">
+
+    <script>
+        function fetchWikipediaArticle() {
+            fetch('https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&generator=random&grnnamespace=0&prop=extracts&exintro=true')
+                .then(response => response.json())
+                .then(data => {
+                    const wikipediaArticleInfo = document.getElementById('wikipediaArticleInfo');
+
+                    // Check if there are articles in the response
+                    if (data.query.pages) {
+                        const pages = Object.values(data.query.pages);
+                        const article = pages[0];
+
+                        wikipediaArticleInfo.innerHTML = `
+                            <p>Article Title: ${article.title}</p>
+                            <p>Extract: ${article.extract || 'Not available'}</p>
+                        `;
+                    } else {
+                        wikipediaArticleInfo.innerHTML = 'No articles found.';
+                    }
+                })
+                .catch(error => console.error('Error fetching Wikipedia article:', error));
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const wikipediaLink = document.getElementById('wikipediaLink');
+            const wikipediaButton = document.getElementById('wikipediaButton');
+
+            wikipediaButton.addEventListener('click', function() {
+                fetchWikipediaArticle();
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -42,6 +75,9 @@ if (!isset($_SESSION['user'])) {
                     <li><a href="product/index.php">Products</a></li>
                     <li><a href="customer/index.php">Orders</a></li>
                     <li><a href="sales/index.php">Sales</a></li>
+                    <li><a href="esports.php">Cat Info</a></li>
+                    <li><a href="article.php?">Cats!</a></li>
+                    <li><a href="youtube.php">YouTube</a></li>
                     <li><a href="logout.php">Logout</a></li>
                 </ul>
             </nav>
